@@ -123,7 +123,6 @@ async function readStream(_response:StreamingTextResponse)
 }
 
 async function cypherCleanup(generatedCypher:string){
-
     // Remove prepended cypher query text from LLM response
     generatedCypher = generatedCypher.toString().trim().replace('Cypher Query:','');
     generatedCypher = generatedCypher.toString().trim().replace('cypher query:','');
@@ -131,9 +130,12 @@ async function cypherCleanup(generatedCypher:string){
     generatedCypher = generatedCypher.toString().trim().replace('Cypher:','');
     generatedCypher = generatedCypher.toString().trim().replace('cypher','');
     generatedCypher = generatedCypher.toString().trim().replace('Cypher','');
-
+    
     // Remove markdown quotes
     generatedCypher = generatedCypher.toString().trim().replaceAll('```','');
+
+    // Remove LIMIT clause
+    generatedCypher = generatedCypher.replace(/\s*LIMIT\s+\d+/i, '');
 
     if(generatedCypher.startsWith('"')&& generatedCypher.endsWith('"'))
     {

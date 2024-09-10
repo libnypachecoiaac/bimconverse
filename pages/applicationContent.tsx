@@ -293,8 +293,9 @@ const ApplicationContent: NextPage = () => {
     if (responseText.toString().toLowerCase().indexOf('limit') !== -1 ) {
       query = responseText.toString();
     } else {
-      query = respondWithChart? responseText.toString().trim().replace(';','') : responseText.toString().trim().replace(';','') + '\nLIMIT 5';
+      query = respondWithChart? responseText.toString().trim().replace(';','') : responseText.toString().trim().replace(';','');
     }
+    //  + '\nLIMIT 5'
 
     userData[userData.length-1].cypher = query;
 
