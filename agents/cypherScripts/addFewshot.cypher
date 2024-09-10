@@ -5,7 +5,7 @@ MATCH (poi:EmailAddress:PersonOfInterest)<-[:FROM]-(message:EmailMessage)-[:TO]-
 (message)<-[:FORWARD_OF*1..8]-(forwardedMessage) WHERE message <> forwardedMessage
 MATCH (sender)<-[:FROM]-(forwardedMessage)-[:TO]->(fwdRecipient) WHERE NOT fwdRecipient:Internal
 RETURN DISTINCT sender.email as person_of_interest_email, fwdRecipient.email as external_recipient_email , forwardedMessage.subject as subject
-LIMIT 10
+LIMIT 100
 ",
 PatientJourney: "Ask: Prediabetes disease/condition distribution by race ?
 Cypher Query:

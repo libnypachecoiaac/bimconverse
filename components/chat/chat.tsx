@@ -124,7 +124,7 @@ const Chat = (props) => {
                 backgroundRepeat: 'repeat', // Prevent the image from repeating
             }}
             >
-                Chat </Stack>
+                </Stack>
             <List sx={{
                 width: '100%',
                 height: `calc(100vh - ${getChatHeight()}px)`,
@@ -140,9 +140,6 @@ const Chat = (props) => {
                     // <ChatMessage key={`message-${i}`} message={m} />
                     <div className="chat-message" key={i}>
                         <ListItem divider sx={{ width: "100%" }}>
-                            <ListItemAvatar>
-                                <Image width={30} height={30} alt="Neo4j" src={m.avatar} />
-                            </ListItemAvatar>
 
                             {i === 0 && (
                                 <span>
@@ -155,7 +152,6 @@ const Chat = (props) => {
                                                     variant="caption"
                                                     color="text.primary"
                                                 >
-                                                    Hey there! NeoConverse uses generative AI to help you communicate with neo4j database using natural language. If you encounter any inaccurate responses, please report them using the report icon. Let's start chatting!
                                                 </Typography>
                                                 {" "}
                                             </React.Fragment>

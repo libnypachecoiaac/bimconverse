@@ -33,7 +33,7 @@ export default class RealEstatePromptProvider implements PromptProvider {
 
         ai_context += `\nWith above neo4j graph model i want to write cypher queries and follow below best practices
         Please make sure the direction of relationship in cypher queries are matches with relationship pattern explained above
-        Please apply toLower(p.{property_name}) contains toLower({searchTerm}) pattern on filtering any properties, Respond with just cypher query strictly please
+        Please apply toLower(p.{property_name}) contains toLower({searchTerm}) pattern on filtering any properties, Respond with just cypher query strictly please. Do not include a LIMIT clause in the cypher query.
         `
       
         return ai_context;
