@@ -50,6 +50,10 @@ export async function GenerateContent(
             response = llmResponse
         }
     }
+
+    // Print the prompt to the terminal
+    console.log('Generated Prompt:', prompt);
+    
     return response;
 }
 
