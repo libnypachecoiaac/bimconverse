@@ -284,7 +284,7 @@ const handleConvoConnectionChange = (event: React.ChangeEvent<HTMLInputElement>)
         maxWidth={false}
         aria-labelledby="form-dialog-title"
         PaperProps={{
-          style: { width: "80%", maxWidth: "none" }, // Custom width here
+          style: { width: "80%", maxWidth: "none"}, // Custom width here
         }}
       >
         <DialogTitle id="form-dialog-title">Agent Details</DialogTitle>

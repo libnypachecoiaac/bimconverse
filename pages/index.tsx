@@ -103,10 +103,10 @@ const Home: NextPage = () => {
           </Grid>
           <Grid item xs={9}
 
-          sx={{backgroundColor: 'rgba(225, 234, 247, 1)'}}
+          sx={{backgroundColor: 'rgba(21, 69, 151, 1)'}}
 
           >
-            <Stack direction="row" justifyContent={"center"} spacing={0} style={{ paddingLeft: 10, backgroundColor: 'rgba(225, 234, 247, 1)' }}
+            <Stack direction="row" justifyContent={"center"} spacing={0} style={{ paddingLeft: 10, backgroundColor: 'rgba(21, 69, 151, 1)' }}
             >
               {/* <img
                 height="24"
@@ -115,9 +115,9 @@ const Home: NextPage = () => {
                 alt="Logo"
                 style={{ marginRight: '18px', marginTop: '12px' }}
               /> */}
-              <Typography style={{ letterSpacing: "0.1em", color: "rgba(42, 96, 140, 1)", whiteSpace: "pre-wrap", textAlign: 'left', fontSize: "30px", fontWeight: 600 }}
-              >BIMConverse
-              </Typography>
+                <Typography style={{color: "rgba(255, 255, 255, 1)", whiteSpace: "pre-wrap", textAlign: 'left', fontSize: "40px", fontFamily: "Impact, Charcoal, sans-serif" }}
+                >BIMConverse
+                </Typography>
               {/* Switching to FontAwesome so I can make a favicon */}
               {/* <div style={{ width: 24, height: 24 }}>
                 <FontAwesomeIcon icon={faComments} style={{ color: "rgba(240, 148, 114, 1)" }} />
