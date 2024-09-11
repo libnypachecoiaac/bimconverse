@@ -115,7 +115,7 @@ const Home: NextPage = () => {
                 alt="Logo"
                 style={{ marginRight: '18px', marginTop: '12px' }}
               /> */}
-                <Typography style={{color: "rgba(255, 255, 255, 1)", whiteSpace: "pre-wrap", textAlign: 'left', fontSize: "40px", fontFamily: "Impact, Charcoal, sans-serif" }}
+                <Typography style={{color: "rgba(255, 255, 255, 1)", whiteSpace: "pre-wrap", textAlign: 'left', fontSize: "40px", fontFamily: "Impact, Charcoal, sans-serif", fontStyle: "italic" }}
                 >BIMConverse
                 </Typography>
               {/* Switching to FontAwesome so I can make a favicon */}
