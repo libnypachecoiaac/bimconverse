@@ -182,7 +182,8 @@ const AgentList = (props) => {
                 justifyContent="space-between" 
                 sx={{
                     paddingTop: "6px",
-                    backgroundImage: 'url(/shape3_bottom_copy.png)',
+                    // backgroundImage: 'url(/shape3_bottom_copy.png)',
+                    backgroundColor: 'rgba(225, 234, 247, 1)',
                     backgroundSize: 'contain', // Ensure the full image is visible
                     backgroundPosition: 'center', // Center the background image
                     backgroundRepeat: 'repeat', // Prevent the image from repeating
@@ -195,7 +196,7 @@ const AgentList = (props) => {
                 }}>
                     Agents
                 </div> */}
-                <Typography
+                {/* <Typography
                         sx={{ display: 'inline', color: "rgba(0, 0, 0, 0.6)", paddingLeft: "20px", fontWeight: 600, fontSize: 18, fontFamily: "sans-serif" }}
                         component="span"
                         variant="caption"
@@ -208,10 +209,11 @@ const AgentList = (props) => {
                         <Button  sx={{color:"#606060"}} variant="text" startIcon={<AddCircleRounded  color="#606060"  />} onClick={handleOpenDialog}>
                             Add Agent
                         </Button>
-                </div>
+                </div> */}
             </Stack>
+            
             <AgentDialog open={isDialogOpen} agentData = {agentData} onSave={handleSaveAgentData} onClose={handleCloseDialog}></AgentDialog>
-            <Accordion sx={{ marginTop: '4px', '&.Mui-expanded': { marginTop: '4px' }}} >
+            <Accordion sx={{ marginTop: '4px', '&.Mui-expanded': { marginTop: '4px' }, backgroundColor: 'rgb(225, 234, 247)'}} >
                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                     <Typography
                         sx={{
@@ -222,7 +224,8 @@ const AgentList = (props) => {
                         fontFamily: "sans-serif",
                         paddingLeft: '10px'
                     }}
-                    >Explore Predefined Agents</Typography>
+                    ></Typography>
+                    {/* Explore Predefined Agents */}
                 </AccordionSummary>
                 <AccordionDetails>
                     <List sx={{
@@ -233,9 +236,9 @@ const AgentList = (props) => {
                         borderTop: '2px dotted lightgray',
                         // marginTop: '3px',
                         borderColor: 'grey.300',
-                        bgcolor: 'background.paper',
+                        bgcolor: 'rbga(225, 234, 247, 1)',
                         "&& .Mui-selected": {
-                            backgroundColor: "#bdbdbd", paddingLeft: "20px"
+                            backgroundColor: "rgb(225, 234, 247)", paddingLeft: "20px"
                         }
                     }}
                     >
@@ -243,7 +246,7 @@ const AgentList = (props) => {
                             <Typography
                                 sx={{
                                     display: 'inline',
-                                    color: "rgba(0, 0, 0, 0.6)",
+                                    color: "rgba(0, 0, 0, 1)",
                                     fontWeight: 400,
                                     fontSize: 15,
                                     fontFamily: "sans-serif",
@@ -330,7 +333,7 @@ const AgentList = (props) => {
                                             secondary={
                                                 <React.Fragment>
                                                     <Typography
-                                                        sx={{ display: 'inline', color: "rgba(0, 0, 0, 0.6)", fontWeight: 400, fontSize: 15, fontFamily: "sans-serif" }}
+                                                        sx={{ display: 'inline', color: "rgba(0, 0, 0, 1)", fontWeight: 400, fontSize: 15, fontFamily: "sans-serif" }}
                                                         component="span"
                                                         variant="caption"
                                                         color="text.primary"
@@ -349,7 +352,7 @@ const AgentList = (props) => {
                     </List>
                 </AccordionDetails>
             </Accordion>
-            <Accordion expanded={true}  sx={{ marginTop: '4px', '&.Mui-expanded': { marginTop: '4px' }}} >
+            <Accordion expanded={true}  sx={{ marginTop: '4px', '&.Mui-expanded': { marginTop: '4px' }, backgroundColor: 'rgb(225, 234, 247)'}} >
                 <AccordionSummary  expandIcon={<ExpandMoreIcon />}>
                     <Typography
                      sx={{
@@ -360,7 +363,8 @@ const AgentList = (props) => {
                         fontFamily: "sans-serif",
                         paddingLeft: '10px'
                     }}
-                    >Agents Created By You</Typography>
+                    ></Typography>
+                    {/* Agents Created By You */}
                 </AccordionSummary>
                 <AccordionDetails>
                     <List sx={{
@@ -371,7 +375,7 @@ const AgentList = (props) => {
                         borderTop: '2px dotted lightgray',
                         marginTop: '3px',
                         borderColor: 'grey.300',
-                        bgcolor: 'background.paper',
+                        bgcolor: 'rgba(225, 234, 247, 1)',
                         "&& .Mui-selected": {
                             backgroundColor: "#bdbdbd", paddingLeft: "20px"
                         }
@@ -381,7 +385,7 @@ const AgentList = (props) => {
                             <Typography
                                 sx={{
                                     display: 'inline',
-                                    color: "rgba(0, 0, 0, 0.6)",
+                                    color: "rgba(0, 0, 0, 1)",
                                     fontWeight: 400,
                                     fontSize: 15,
                                     fontFamily: "sans-serif",

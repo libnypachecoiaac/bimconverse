@@ -2,7 +2,7 @@
 import packageInfo from "../../package.json"; 
 import { getUser } from '../../pages/api/authHelper';
 
-const AppName = 'NeoConverse'
+const AppName = 'BIMConverse'
 
 const trackingEnabled = process.env.NEXT_PUBLIC_SEGMENT_API_KEY ? true : false;
 

@@ -4,19 +4,20 @@
 
 body {
   margin: 0px;
+  background-color: rgb(225, 234, 247);
 }
 
 .jsonview-code {
     display: block;
     padding: 0.5rem;
-    background-color: rgb(40, 44, 52);
+    background-color: rgb(0, 0, 0);
     color: rgb(136, 198, 190);
     overflow-x: scroll;
     border-radius: 5px;
   }
 
   .jsonview-line { white-space: nowrap; }
-  .jsonview-hi-line { white-space: nowrap; background-color: rgb(80, 80, 95); }
+  .jsonview-hi-line { white-space: nowrap; background-color: rgb(0, 0, 0); }
 
   .jsonview-str { color: rgb(121, 182, 242); }
   .jsonview-num { color: rgb(255, 255, 200); }

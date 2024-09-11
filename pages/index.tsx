@@ -77,7 +77,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>NeoConverse</title>
+        <title>BIMConverse</title>
         {/*<link rel="icon" href="/logo-section-5.svg" /> */}
         {/* adding ?v=2 because Chrome won't update it*/}
         {/*https://stackoverflow.com/questions/2208933/how-do-i-force-a-favicon-refresh*/}
@@ -86,14 +86,15 @@ const Home: NextPage = () => {
       {/* <Header /> */}
       <main style={{ overflowY: "scroll", height: "100vh" }}>
         <Grid container spacing={12}
-          sx={{ paddingTop: '8px', background: "rgba(251, 249, 246, 1)" }}
+          sx={{ paddingTop: '8px', background: "rgb(251, 249, 246)"}}
         >
           <Grid item xs={2}
-            style={{ verticalAlign: "center", }}
+            style={{ verticalAlign: "center"}}
             sx={{
               width: '100%',
               height: '100%,',
-              backgroundImage: 'url(/shape3_top.png)',
+              // backgroundImage: 'url(/shape3_top.png)',
+              backgroundColor: 'rgba(225, 234, 247, 1)',
               backgroundSize: 'cover',
               backgroundPosition: 'center', // Center the background image
               backgroundRepeat: 'no-repeat', // Prevent the image from repeating
@@ -101,23 +102,26 @@ const Home: NextPage = () => {
           >
           </Grid>
           <Grid item xs={9}
+
+          sx={{backgroundColor: 'rgba(225, 234, 247, 1)'}}
+
           >
-            <Stack direction="row" justifyContent={"center"} spacing={0} style={{ paddingLeft: 10 }}
+            <Stack direction="row" justifyContent={"center"} spacing={0} style={{ paddingLeft: 10, backgroundColor: 'rgba(225, 234, 247, 1)' }}
             >
-              <img
+              {/* <img
                 height="24"
                 width="auto"
                 src="/neologofull.png"
                 alt="Logo"
                 style={{ marginRight: '18px', marginTop: '12px' }}
-              />
+              /> */}
               <Typography style={{ letterSpacing: "0.1em", color: "rgba(42, 96, 140, 1)", whiteSpace: "pre-wrap", textAlign: 'left', fontSize: "30px", fontWeight: 600 }}
-              >NeoConverse
+              >BIMConverse
               </Typography>
               {/* Switching to FontAwesome so I can make a favicon */}
-              <div style={{ width: 24, height: 24 }}>
+              {/* <div style={{ width: 24, height: 24 }}>
                 <FontAwesomeIcon icon={faComments} style={{ color: "rgba(240, 148, 114, 1)" }} />
-              </div>
+              </div> */}
               <div style={{
                 display: 'flex',
                 alignItems: 'flex-end',
@@ -125,11 +129,11 @@ const Home: NextPage = () => {
                 fontStyle: 'italic',
                 height: '2.5em'
               }}>
-                <Typography variant="caption" display="block" gutterBottom
+                {/* <Typography variant="caption" display="block" gutterBottom
                   style={{ textAlign: 'left', color: "rgba(42, 96, 140, 1)" }}
                 >
                   A GenAI copilot to converse with your neo4j graph data
-                </Typography>
+                </Typography> */}
               </div>
             </Stack>
           </Grid>
@@ -139,7 +143,8 @@ const Home: NextPage = () => {
             sx={{
               width: '100%',
               height: '100%,',
-              backgroundImage: 'url(/shape2_bottom.png)',
+              // backgroundImage: 'url(/shape2_bottom.png)',
+              backgroundColor: 'rgba(225, 234, 247, 1)',
               backgroundSize: 'contain',
               backgroundPosition: 'top', // Center the background image
               backgroundRepeat: 'repeat', // Prevent the image from repeating

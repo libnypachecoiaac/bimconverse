@@ -291,7 +291,7 @@ const handleConvoConnectionChange = (event: React.ChangeEvent<HTMLInputElement>)
         <DialogContent>
 
           <Box
-            sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex' }}
+            sx={{ flexGrow: 1, bgcolor: 'rbg(225, 234, 247)', display: 'flex' }}
           >
             <Tabs
               orientation="vertical"

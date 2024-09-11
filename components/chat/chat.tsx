@@ -118,7 +118,8 @@ const Chat = (props) => {
         <>
             <Stack style={{
                 color: "rgba(0, 0, 0, 0.6)", paddingTop: "12px", paddingBottom: "12px", marginLeft: -5, overflow: 'auto', fontWeight: 600, fontSize: 18, fontFamily: "sans-serif",
-                backgroundImage: 'url(/shape3_bottom_copy.png)',
+                // backgroundImage: 'url(/shape3_bottom_copy.png)',
+                backgroundColor: 'rgba(225, 234, 247, 1)',
                 backgroundSize: 'contain', // Ensure the full image is visible
                 backgroundPosition: 'center', // Center the background image
                 backgroundRepeat: 'repeat', // Prevent the image from repeating
@@ -130,7 +131,7 @@ const Chat = (props) => {
                 height: `calc(100vh - ${getChatHeight()}px)`,
                 borderLeft: 1,
                 borderColor: 'grey.300',
-                bgcolor: 'background.paper',
+                bgcolor: 'rbga(225, 234, 247, 1)',
                 overflow: 'auto',
                 borderTop: '2px dotted lightgray',
                 borderBottom: '2px dotted lightgray',
@@ -222,12 +223,12 @@ const Chat = (props) => {
                             }
                             {i != 0 && m.isChart && m.chartData.toString() === '' && (
                                 <ListItemText disableTypography
-                                    style={{ whiteSpace: "pre-wrap", color: "rgba(0, 0, 0, 0.6)", fontWeight: 400, fontSize: 15, fontFamily: "sans-serif" }}
+                                    style={{ whiteSpace: "pre-wrap", color: "rgba(0,0,0,1)", fontWeight: 400, fontSize: 15, fontFamily: "sans-serif" }}
                                     // primary={m.text} 
                                     secondary={
                                         <React.Fragment>
                                             <Typography
-                                                sx={{ display: 'inline', color: "rgba(0, 0, 0, 0.6)", fontWeight: 400, fontSize: 15, fontFamily: "sans-serif" }}
+                                                sx={{ display: 'inline', color: "rgba(0, 0, 0, 1)", fontWeight: 400, fontSize: 15, fontFamily: "sans-serif" }}
                                                 component="span"
                                                 variant="caption"
                                                 color="text.primary"
@@ -264,7 +265,7 @@ const Chat = (props) => {
                     </div>
                 ))}
             </List>
-            <TextField ref={howCanIHelpRef} fullWidth id="standard-basic" label="How can i help you today ?" variant="standard"
+            <TextField ref={howCanIHelpRef} fullWidth id="standard-basic" label="Ask your question here..." variant="standard"
                 sx={{ fontWeight: 400, fontSize: 15 }}
                 multiline
                 onKeyDown={(e) => {
@@ -281,9 +282,9 @@ const Chat = (props) => {
                 InputProps={{
                     endAdornment: (
                         <InputAdornment position="end">
-                            <Tooltip title={"Sample Questions and Model"}>
+                            {/* <Tooltip title={"Sample Questions and Model"}>
                                 <MoreVertIcon style={{ cursor: "pointer" }} onClick={handleMenu} />
-                            </Tooltip>
+                            </Tooltip> */}
                             {respondWithChart ?
                                 <Tooltip title="Respond with Chart">
                                     <DonutSmallIcon sx={{ cursor: "pointer" }} onClick={() => { setRespondWithChart(!respondWithChart) }} />
